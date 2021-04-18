@@ -49,7 +49,7 @@ export default {
 
     .sorting-btn {
         cursor: pointer;
-        margin-top: 42px;
+        padding-top: 42px;
         display: flex;
         justify-content: flex-end;
 
@@ -61,13 +61,14 @@ export default {
     .expanding-list {
         visibility: hidden;
         width: 160px;
-        color: $color-white;
+        background-color: $color-white;
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
         border-radius: 8px;
         position: absolute;
         top: calc(100% + 6px);
         right: 0;
         padding: 8px 0;
+        z-index: 1;
 
         &.selected {
             visibility: visible;

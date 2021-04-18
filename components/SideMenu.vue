@@ -1,10 +1,8 @@
 <template>
     <div class="side-menu">
-        <div class="catalog-item-container">
-            <SideMenuLink :active="true">Рюкзаки</SideMenuLink>
-            <SideMenuLink :active="false">Футболки</SideMenuLink>
-            <SideMenuLink :active="false">Рубашки</SideMenuLink>
-        </div>
+        <SideMenuLink :active="true">Рюкзаки</SideMenuLink>
+        <SideMenuLink :active="false">Футболки</SideMenuLink>
+        <SideMenuLink :active="false">Рубашки</SideMenuLink>
     </div>
 </template>
 

@@ -5,7 +5,7 @@
 
         </div>
         <div class="content">
-
+            <CatalogSection/>
         </div>
     </div>
 </template>

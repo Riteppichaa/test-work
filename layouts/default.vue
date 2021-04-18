@@ -40,7 +40,9 @@ export default {}
             font-weight: bold;
             font-size: 32px;
             line-height: 41px;
-            margin-top: 32px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-top: 32px;
             margin-bottom: 24px;
         }
     }
