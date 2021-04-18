@@ -33,19 +33,17 @@ export default {
     background-color: #fff;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    .heading {
+        color: $color-grey;
+        font-family: PT Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+        display: inline-block;
+    }
 }
 
-.heading {
-    color: $color-grey;
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 28px;
-    display: inline-block;
-
-
-}
 
 .basket-icon {
     display: inline-block;

@@ -3,8 +3,10 @@
         <div>
             <Header/>
         </div>
-        <Side-menu/>
-        <Nuxt/>
+        <div class="container">
+            <Side-menu/>
+            <Nuxt/>
+        </div>
     </div>
 </template>
 
