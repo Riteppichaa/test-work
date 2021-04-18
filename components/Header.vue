@@ -47,5 +47,6 @@ export default {
 
 .basket-icon {
     display: inline-block;
+    cursor: pointer;
 }
 </style>

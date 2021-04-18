@@ -1,17 +1,21 @@
 <template>
     <div class="basket-link">
         <IconBasket/>
-        <div class="count">{{ basketItemCount }}</div>
+        <div class="count">{{ basket.length }}</div>
     </div>
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+
 export default {
     name: "BasketLink",
-    data() {
-        return {
-            basketItemCount: 0
-        }
+    mounted() {
+        this.getBasket()
+    },
+    computed: mapGetters(['basket']),
+    methods: {
+        ...mapActions(['getBasket'])
     }
 }
 </script>

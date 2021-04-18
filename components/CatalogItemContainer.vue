@@ -3,21 +3,28 @@
         <div class="section-item-picture">
             <img :src="'http://front-test.idalite.com'+ item.photo" alt="">
             <RatingItem class="rating" :rating="item.rating"/>
-            <IconBasket class="basket"/>
+            <div @click="addToBasket(item)">
+                <IconBasket class="basket"/>
+            </div>
         </div>
         <div class="item-description">
-            <span class="product-name">{{ item.name}}</span>
+            <span class="product-name">{{ item.name }}</span>
             <span class="product-price">{{ item.price }} ₽</span>
         </div>
     </div>
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
     name: "CatalogItemContainer",
     props: {
         item: {}
     },
+    methods: {
+        ...mapActions(['addToBasket']),
+    }
 }
 </script>
 
@@ -53,6 +60,7 @@ export default {
             width: 12px;
             fill: $color-grey-light;
             cursor: pointer;
+
             &:hover {
                 fill: $color-black
             }
