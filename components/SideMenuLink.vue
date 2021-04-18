@@ -30,6 +30,7 @@ export default {
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
+    margin-bottom: 16px;
     &.active {
         color: $color-black;
         text-decoration: underline;

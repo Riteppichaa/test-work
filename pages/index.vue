@@ -1,12 +1,18 @@
 <template>
-  <div class="container">
+    <div class="">
+        <div class="heading">
+            <Sorting/>
 
-  </div>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: "Catalog"
+    name: "Catalog"
 }
 </script>
 

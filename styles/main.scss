@@ -1,8 +1,13 @@
 @import "config";
 
+* {
+    margin: 0;
+    font-family: "PT Sans";
+}
+
 .container {
     padding: 0 15px;
     margin: 0 auto;
     max-width: 1148px;
-    font-family: "PT Sans";
 }
+

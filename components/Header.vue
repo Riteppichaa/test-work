@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header-container container">
 
-            <div class="heading">TestList</div>
+            <div class="title">TestList</div>
             <BasketLink class="basket-icon"/>
         </div>
 
@@ -24,7 +24,6 @@ export default {
 
     > * {
         margin-top: 18px;
-        margin-bottom: 20px
     }
 }
 
@@ -33,7 +32,8 @@ export default {
     background-color: #fff;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
-    .heading {
+
+    .title {
         color: $color-grey;
         font-family: PT Sans;
         font-style: normal;
