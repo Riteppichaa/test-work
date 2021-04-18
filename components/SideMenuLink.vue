@@ -1,5 +1,8 @@
 <template>
-    <div :class="['side-menu-link', {'active': active}]">
+    <div
+        :class="['side-menu-link', {'active': active}]"
+        @click="$router.push(link)"
+    >
         <slot/>
     </div>
 </template>
@@ -11,6 +14,9 @@ export default {
         active: {
             type: Boolean,
             default: false
+        },
+        link: {
+            default: ''
         }
     },
     data () {
@@ -31,6 +37,8 @@ export default {
     font-size: 16px;
     line-height: 21px;
     margin-bottom: 16px;
+    cursor: pointer;
+
     &.active {
         color: $color-black;
         text-decoration: underline;
