@@ -16,7 +16,6 @@ export default {
     name: "SideMenu",
     mounted() {
         this.getMenu()
-        console.log(this.$route.params.id)
     },
     data() {
         return {

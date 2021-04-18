@@ -1,23 +1,19 @@
 <template>
     <div class="catalog-section">
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
-        <CatalogItemContainer/>
+        <CatalogItemContainer v-for="product in productItems" :item="product"/>
     </div>
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
 export default {
-    name: "CatalogSection"
+    name: "CatalogSection",
+
+    mounted() {
+        this.getProducts(this.$route.params.id)
+    },
+    methods: mapActions(['getProducts']),
+    computed: mapGetters(['productItems'])
 }
 </script>
 

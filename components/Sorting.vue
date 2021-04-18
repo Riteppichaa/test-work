@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
     name: "Sorting",
 
@@ -33,9 +35,11 @@ export default {
         }
     },
     methods: {
+        ...mapActions(['sortProducts']),
         selectSort(value) {
             this.selectedTypeName = value.name
             this.isListViewed = false
+            this.sortProducts(value.name)
         }
     }
 }

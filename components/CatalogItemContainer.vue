@@ -1,20 +1,23 @@
 <template>
     <div class="catalog-item-container">
         <div class="section-item-picture">
-            <img src="http://front-test.idalite.com/upload/product/backpack2-4755.e0agsd.jpg" alt="">
-            <RatingItem class="rating"/>
+            <img :src="'http://front-test.idalite.com'+ item.photo" alt="">
+            <RatingItem class="rating" :rating="item.rating"/>
             <IconBasket class="basket"/>
         </div>
         <div class="item-description">
-            <span class="product-name">Рюкзак Louis Vuitton Discovery</span>
-            <span class="product-price">150 000 ₽</span>
+            <span class="product-name">{{ item.name}}</span>
+            <span class="product-price">{{ item.price }} ₽</span>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "CatalogItemContainer"
+    name: "CatalogItemContainer",
+    props: {
+        item: {}
+    },
 }
 </script>
 
@@ -34,6 +37,7 @@ export default {
         img {
             max-width: 100%;
             height: 180px;
+            margin-bottom: 16px;
         }
 
         .rating {
@@ -48,7 +52,10 @@ export default {
             right: 0;
             width: 12px;
             fill: $color-grey-light;
-
+            cursor: pointer;
+            &:hover {
+                fill: $color-black
+            }
         }
     }
 
@@ -62,6 +69,8 @@ export default {
             font-weight: normal;
             font-size: 14px;
             line-height: 18px;
+            white-space: pre;
+            overflow: hidden;
         }
 
         .product-price {
