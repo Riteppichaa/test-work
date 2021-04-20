@@ -1,7 +1,10 @@
 <template>
-    <div class="basket-link">
-        <IconBasket/>
-        <div class="count">{{ basket.length }}</div>
+    <div>
+        <div class="basket-link" @click="openBasket">
+            <IconBasket/>
+            <div class="count">{{ basket.length }}</div>
+        </div>
+        <ModalBasket :isOpen="isBasketOpen" @modalClose="modalClose"/>
     </div>
 </template>
 
@@ -10,12 +13,24 @@ import {mapActions, mapGetters} from "vuex";
 
 export default {
     name: "BasketLink",
+    data() {
+        return {
+            isBasketOpen: false,
+        }
+    },
     mounted() {
         this.getBasket()
     },
     computed: mapGetters(['basket']),
     methods: {
-        ...mapActions(['getBasket'])
+        ...mapActions(['getBasket']),
+        openBasket() {
+            this.isBasketOpen = true
+        },
+        modalClose() {
+            console.log(22222)
+            this.isBasketOpen = false
+        }
     }
 }
 </script>
@@ -34,7 +49,7 @@ export default {
         border-radius: 50%;
         width: 12px;
         height: 12px;
-        font-size: 8px;
+        font-size: 9px;
         text-align: center;
     }
 }

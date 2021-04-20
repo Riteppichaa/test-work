@@ -20,6 +20,19 @@ export default {
             }
             let basket = JSON.parse(localStorage.getItem('basket'))
             commit('setBasket', basket)
+        },
+        delBasket({commit}, id) {
+            let basket = JSON.parse(localStorage.getItem('basket'))
+            let arr = basket.filter(data => {
+                return id !== data.id
+            })
+            localStorage.setItem('basket', JSON.stringify(arr))
+            commit('setBasket', arr)
+
+        },
+        clearBasket({commit}){
+            localStorage.setItem('basket', JSON.stringify([]))
+            commit('setBasket', [])
         }
     },
     mutations: {
